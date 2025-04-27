@@ -1,7 +1,6 @@
-const host = window.location.origin;
 
 async function createCustomer() {
-  await fetch(`${host}/customer`, {
+  await fetch(`/customer`, {
     method: 'POST',
     body: JSON.stringify({
       firstName: `${document.getElementById('firstName').value}`,
