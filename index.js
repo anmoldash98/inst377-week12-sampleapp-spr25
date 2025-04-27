@@ -7,7 +7,6 @@ dotenv.config();
 
 const app = express();
 const port = 3000;
-
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
@@ -22,7 +21,7 @@ app.get('/', (req, res) => {
 app.get('/customers', async (req, res) => {
   console.log('Attempting to GET all customers');
 
-  const { data, error } = await supabase.from('Customer').select();
+  const { data, error } = await supabase.from('customer').select();
 
   if (error) {
     console.log('Error');
