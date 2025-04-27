@@ -51,7 +51,7 @@ app.post('/customer', async (req, res) => {
   }
 
   const { data, error } = await supabase
-    .from('Customer')
+    .from('customer')
     .insert({
       customer_first_name: firstName,
       customer_last_name: lastName,
